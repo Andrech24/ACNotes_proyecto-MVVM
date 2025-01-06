@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ACNotes.ACViewModels"
+             x:Class="ACNotes.Views.ACNotePage"
+             Title="Editar Nota">
+    <ContentPage.BindingContext>
+        <viewModels:ACNoteViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Entry Text="{Binding Text}" Placeholder="Título de la nota" />
+        <Editor Text="{Binding Content}" Placeholder="Contenido de la nota" />
+        <Button Text="Guardar" Command="{Binding SaveCommand}" />
+    </StackLayout>
+</ContentPage>
